@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    username: root
+    password: 1122Yang.yang
+    url: jdbc:mysql://81.71.151.101:3306/crm?characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    druid:
+      max-wait: 5000
+      max-active: 50
+      min-idle: 5
+      initial-size: 10
+server:
+  port: 8888
+
+# 日志输出等级
+logging:
+  level:
+    com.ciusyan.crm: debug
+
+crm:
+  cfg:
+    cors-origins:
+      - http://81.71.151.101
+
+  upload:
+    base-path: /usr/project_file/crm/
+    upload-path: upload/
+    image-path: image/
+    video-path: video/

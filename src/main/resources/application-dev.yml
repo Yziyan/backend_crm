@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/crm?characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    druid:
+      max-wait: 5000
+      max-active: 50
+      min-idle: 5
+      initial-size: 10
+server:
+  port: 8888
+
+# 日志输出等级
+logging:
+  level:
+    com.ciusyan.crm: debug
+
+
+crm:
+  cfg:
+    cors-origins:
+      - http://localhost:8080
+      - http://localhost:8081
+#      - http://192.168.1.8:8080
+#      - http://192.168.23.129:80
+#      - http://192.168.23.129
+#      - http://192.168.23.129:8080
+#      - http://192.168.1.8:8081
+
+  upload:
+    base-path: D:/project_file/crm/
+    upload-path: upload/
+    image-path: image/
+    video-path: video/
